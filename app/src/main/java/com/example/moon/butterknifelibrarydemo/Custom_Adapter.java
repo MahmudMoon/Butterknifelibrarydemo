@@ -44,12 +44,13 @@ public class Custom_Adapter extends RecyclerView.Adapter<Custom_Adapter.MyViewHo
 
     class MyViewHolder extends RecyclerView.ViewHolder{
 
+        @BindView(R.id.name)
         TextView textView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             textView = (TextView)itemView.findViewById(R.id.name);
             Log.i(TAG, "MyViewHolder: ");
-            //ButterKnife.bind(this,itemView);
+            ButterKnife.bind(this,itemView);
 
         }
     }
